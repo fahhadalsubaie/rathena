@@ -17560,8 +17560,8 @@ Body:
     Buy: 600
     Weight: 30
   - Id: 7711
-    AegisName: Update_Ticket
-    Name: Event Ticket
+    AegisName: Monkey_Event_Ticket
+    Name: Monkey Event Ticket
     Type: Etc
     Weight: 10
   - Id: 7712
