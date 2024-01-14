@@ -1,0 +1,140 @@
+prontera,152,192,5	script	Healer	10458,{
+
+	specialeffect2 EF_HEAL2; percentheal 100,100;
+	specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,600000,10;
+	specialeffect2 EF_BLESSING; sc_start SC_BLESSING,600000,10;
+	
+	if ( countitem(.VIP_item) || rentalcountitem(.VIP_item) ) {
+		specialeffect2 EF_ANGELUS; sc_start SC_ANGELUS,600000,10;
+		specialeffect2 EF_SUFFRAGIUM; sc_start SC_SUFFRAGIUM,600000,3;
+		specialeffect2 EF_IMPOSITIO; sc_start SC_IMPOSITIO,600000,5;
+		specialeffect2 EF_GLORIA; sc_start SC_GLORIA,600000,5;
+		specialeffect2 EF_MAGNIFICAT; sc_start SC_MAGNIFICAT,600000,5;
+		specialeffect2 EF_CHEMICALPROTECTIOn; sc_start SC_CP_WEAPON,600000,5;
+		sc_start SC_CP_ARMOR,600000,5;
+		sc_start SC_CP_SHIELD,600000,5;
+		sc_start SC_CP_HELM,600000,5;
+		specialeffect2 EF_ASSUMPTIO; sc_start SC_ASSUMPTIO,600000,5;
+		sc_start SC_ADRENALINE2,600000,1;
+		specialeffect2 EF_MAXPOWER; sc_start SC_MAXIMIZEPOWER,600000,5;
+		specialeffect2 EF_PERFECTION; sc_start SC_WEAPONPERFECTION,600000,5;
+		specialeffect2 EF_ENDURE; sc_start SC_ENDURE,600000,10;
+		sc_start SC_KAUPE,600000,3;
+		sc_start SC_KAITE,600000,7;
+		sc_start SC_STRFOOD,600000,5;
+		sc_start SC_AGIFOOD,600000,5;
+		sc_start SC_VITFOOD,600000,5;
+		sc_start SC_INTFOOD,600000,5;
+		sc_start SC_DEXFOOD,600000,5;
+		sc_start SC_LUKFOOD,600000,5;
+
+		switch ( CLASS ) {
+			case 18:
+			case 4019:
+			case 4071:
+			case 4078:
+				skilleffect "SL_ALCHEMIST",0;
+				sc_start4 SC_SPIRIT,9999999,5,455,0,0;
+				break;
+			case 15:
+			case 4016:
+			case 4070:
+			case 4077:
+				skilleffect "SL_MONK",0;
+				sc_start4 SC_SPIRIT,9999999,5,447,0,0;
+				break;
+			case 4047:
+				skilleffect "SL_STAR",0;
+				sc_start4 SC_SPIRIT,9999999,5,448,0,0;
+				break;
+			case 16:
+			case 4017:
+			case 4067:
+			case 4074:
+				skilleffect "SL_SAGE",0;
+				sc_start4 SC_SPIRIT,9999999,5,449,0,0;
+				break;
+			case 14:
+			case 4015:
+			case 4066:
+			case 4073:
+				skilleffect "SL_CRUSADER",0;
+				sc_start4 SC_SPIRIT,9999999,5,450,0,0;
+				break;
+			case 23:
+			case 4190:
+				skilleffect "SL_SUPERNOVICE",0;
+				sc_start4 SC_SPIRIT,9999999,5,451,0,0;
+				break;
+			case 7:
+			case 4008:
+			case 4054:
+			case 4060:
+				skilleffect "SL_KNIGHT",0;
+				sc_start4 SC_SPIRIT,9999999,5,452,0,0; 
+				break;
+			case 9:
+			case 4010:
+			case 4055:
+			case 4061:
+				skilleffect "SL_WIZARD",0;
+				sc_start4 SC_SPIRIT,9999999,5,453,0,0;
+				break;
+			case 8:
+			case 4009:
+			case 4057:
+			case 4063:
+				skilleffect "SL_PRIEST",0;
+				sc_start4 SC_SPIRIT,9999999,5,454,0,0;
+				break;
+			case 19:
+			case 20:
+			case 4020:
+			case 4021:
+			case 4068:
+			case 4069:
+			case 4075:
+			case 4076:
+				skilleffect "SL_BARDDANCER",0;
+				sc_start4 SC_SPIRIT,9999999,5,455,0,0;
+				break;
+			case 17:
+			case 4018:
+			case 4072:
+			case 4079:
+				skilleffect "SL_ROGUE",0;
+				sc_start4 SC_SPIRIT,9999999,5,456,0,0;
+				break;
+			case 12:
+			case 4013:
+			case 4059:
+			case 4065:
+				skilleffect "SL_ASSASIN",0;
+				sc_start4 SC_SPIRIT,9999999,5,457,0,0;
+				break;
+			case 10:
+			case 4011:
+				skilleffect "SL_BLACKSMITH",0;
+				sc_start4 SC_SPIRIT,9999999,5,458,0,0;
+				break;
+			case 11:
+			case 4012:
+			case 4056:
+			case 4062:
+				skilleffect "SL_HUNTER",0;
+				sc_start4 SC_SPIRIT,9999999,5,460,0,0;
+				break;
+			case 4049:
+				skilleffect "SL_SOULLINKER",0;
+				sc_start4 SC_SPIRIT,9999999,5,461,0,0;
+				break;
+			default:
+				break;
+		}
+	}
+	end;
+	
+OnInit:
+	.VIP_item = 512; //itemId
+	end;
+}
